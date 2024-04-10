@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.delicivite.interfaceconnexion.ControllerConnexion">
+
+    <left>
+        <AnchorPane maxWidth="270.0" prefHeight="600.0" prefWidth="270.0" style="-fx-background-color: #94DAE5#94DAE5;" BorderPane.alignment="CENTER">
+            <Text fx:id="sousTitreLogo" fill="#424242" layoutX="22.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SI BON ET SI RAPIDE !" textAlignment="CENTER" wrappingWidth="228.9060516357422">
+                <font>
+                    <Font name="Lexend SemiBold" />
+                </font>
+            </Text>
+            <ImageView fitHeight="143.0" fitWidth="247.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/images/logoDelicivite-removebg-preview.png" />
+            </ImageView>
+            <ImageView fitHeight="253.0" fitWidth="263.0" layoutX="4.0" layoutY="178.0">
+                <Image url="@/images/sushi.png" />
+            </ImageView>
+         <Text fx:id="sousTitreLogo2" fill="#424242" layoutX="9.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIVRAISON DE REPAS À TROIS-RIVIÈRES" textAlignment="CENTER" wrappingWidth="256.9060516357422">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Text>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane maxWidth="681.0" prefHeight="579.0" prefWidth="681.0" style="-fx-background-color: #FFFF;" BorderPane.alignment="CENTER_LEFT">
+         <ImageView fitHeight="546.0" fitWidth="750.0" opacity="0.08" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../Downloads/background_doodle_food.jpeg" />
+            </image>
+         </ImageView>
+         <Group layoutX="25.0" layoutY="40.0">
+            <children>
+               <ProgressBar prefHeight="10.0" prefWidth="580.0" progress="0.25">
+                  <cursor>
+                     <Cursor fx:constant="DEFAULT" />
+                  </cursor>
+               </ProgressBar>
+               <Group layoutX="127.0" layoutY="5.0">
+                  <children>
+                     <Circle fill="#ffae57" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                     <Text fill="WHITE" layoutX="-6.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                        <font>
+                           <Font name="Lexend Deca Regular" size="25.0" />
+                        </font>
+                     </Text>
+                  </children>
+               </Group>
+               <Group layoutX="300.0" layoutY="5.0">
+                  <children>
+                     <Circle fill="WHITE" radius="30.0" stroke="#ffae57" strokeType="INSIDE" />
+                     <Text fill="#ffae57" layoutX="-6.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+                        <font>
+                           <Font name="Lexend Deca Regular" size="25.0" />
+                        </font>
+                     </Text>
+                  </children>
+               </Group>
+               <Group layoutX="453.0" layoutY="5.0">
+                  <children>
+                     <Circle fill="WHITE" radius="30.0" stroke="#ffae57" strokeType="INSIDE" />
+                     <Text fill="#ffae57" layoutX="-6.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+                        <font>
+                           <Font name="Lexend Deca Regular" size="25.0" />
+                        </font>
+                     </Text>
+                  </children>
+               </Group>
+            </children>
+         </Group>
+            <TextField fx:id="entreeCourriel" alignment="CENTER" layoutX="178.0" layoutY="148.0" maxHeight="37.0" maxWidth="283.0" prefHeight="33.0" prefWidth="283.0" promptText="Nom" style="-fx-background-color: #FFFF; -fx-border-color: #424242; -fx-border-radius: 50; -fx-border-width: 1;">
+                <font>
+                    <Font name="Lexend Light" />
+                </font>
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </padding>
+                <cursor>
+                    <Cursor fx:constant="TEXT" />
+                </cursor>
+            </TextField>
+         <DatePicker layoutX="178.0" layoutY="258.0" prefHeight="30.0" prefWidth="283.0" promptText="Date de naissance" />
+         <RadioButton contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="450.0" layoutY="340.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="114.0" text="Client" textFill="#424242">
+            <font>
+               <Font name="Lexend Light" size="12.0" />
+            </font>
+            <toggleGroup>
+               <ToggleGroup fx:id="Type_utilisateur" />
+            </toggleGroup>
+            <graphic>
+               <ImageView fitHeight="100.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Downloads/order-food.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </RadioButton>
+         <RadioButton contentDisplay="RIGHT" ellipsisString="" layoutX="250.0" layoutY="340.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="138.0" text="   " textFill="#424242" toggleGroup="$Type_utilisateur">
+            <font>
+               <Font name="Lexend Light" size="12.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Downloads/take-away.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </RadioButton>
+         <RadioButton contentDisplay="RIGHT" ellipsisString="" layoutX="50.0" layoutY="340.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="137.0" text="   " textFill="#424242" toggleGroup="$Type_utilisateur">
+            <font>
+               <Font name="Lexend Light" size="12.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Downloads/store.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </RadioButton>
+         <Text fill="#424242" layoutX="220.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscrivez-vous !">
+            <font>
+               <Font name="Lexend Deca SemiBold" size="25.0" />
+            </font>
+         </Text>
+         <TextField fx:id="entreeCourriel1" alignment="CENTER" layoutX="178.0" layoutY="203.0" maxHeight="37.0" maxWidth="283.0" prefHeight="33.0" prefWidth="283.0" promptText="Prénom" style="-fx-background-color: #FFFF; -fx-border-color: #424242; -fx-border-radius: 50;">
+            <font>
+               <Font name="Lexend Light" />
+            </font>
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <cursor>
+               <Cursor fx:constant="TEXT" />
+            </cursor>
+         </TextField>
+         <Text fill="#424242" layoutX="225.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qui êtes-vous?">
+            <font>
+               <Font name="Lexend Deca SemiBold" size="25.0" />
+            </font>
+         </Text>
+         <Text layoutX="503.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client">
+            <font>
+               <Font name="Lexend Light" size="14.0" />
+            </font>
+         </Text>
+         <Text layoutX="305.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livreur">
+            <font>
+               <Font name="Lexend Light" size="14.0" />
+            </font>
+         </Text>
+         <Text layoutX="87.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurateur">
+            <font>
+               <Font name="Lexend Light" size="14.0" />
+            </font>
+         </Text>
+         <Text fill="#fd2528" layoutX="275.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="message erreur">
+            <font>
+               <Font name="Lexend SemiBold" size="12.0" />
+            </font>
+         </Text>
+         <Text fill="#fd2528" layoutX="275.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="message erreur">
+            <font>
+               <Font name="Lexend SemiBold" size="12.0" />
+            </font>
+         </Text>
+         <Text fill="#fd2528" layoutX="275.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="message erreur">
+            <font>
+               <Font name="Lexend SemiBold" size="12.0" />
+            </font>
+         </Text>
+         <Text fill="#fd2528" layoutX="275.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="message erreur">
+            <font>
+               <Font name="Lexend SemiBold" size="12.0" />
+            </font>
+         </Text>
+         <Group layoutX="25.0" layoutY="510.0">
+            <children>
+               <Button fx:id="boutonAnnulerConnexion1" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="350.0" onMouseClicked="#annulerConnexion" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #424242; -fx-background-radius: 6;" text="Réinitialiser" textAlignment="CENTER" textFill="#ffae57" wrapText="true">
+                  <font>
+                     <Font name="Lexend Light" />
+                  </font>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="boutonSeConnecter1" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="448.0" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: #FFAE57; -fx-background-radius: 6;" text="Suivant" textAlignment="CENTER" textFill="#424242" wrapText="true">
+                  <font>
+                     <Font name="Lexend Light" />
+                  </font>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+            </children>
+         </Group>
+        </AnchorPane>
+    </center>
+
+    <stylesheets>
+        <URL value="@../../Downloads/styles.css" />
+    </stylesheets>
+   <top>
+      <MenuBar fx:id="barreMenu" prefHeight="0.0" prefWidth="908.0" style="-fx-background-color: #F0F3F9; -fx-border-color: #c5c5c5;" BorderPane.alignment="CENTER">
+        <menus>
+            <Menu id="menuApparence" fx:id="titreMenuApplication" text="Application">
+               <items>
+                  <MenuItem fx:id="stAnnulerAction" mnemonicParsing="false" text="Annuler              Ctrl Z" />
+                  <MenuItem fx:id="stRefaireAction" mnemonicParsing="false" text="Refaire              Ctrl Y" />
+                  <MenuItem fx:id="stQuitterApp" mnemonicParsing="false" text="Quitter     Ctrl Shift Q" />
+               </items>
+            </Menu>
+          <Menu id="menuApparence" fx:id="titreMenuApparence" text="Apparence">
+            <items>
+              <MenuItem fx:id="stModeSombre" mnemonicParsing="false" text="Mode sombre" />
+                  <MenuItem fx:id="stModeClair" mnemonicParsing="false" text="Mode clair" />
+            </items>
+          </Menu>
+          <Menu fx:id="titreMenuVue" mnemonicParsing="false" text="Vue">
+               <items>
+                  <Menu fx:id="titreMenuZoom" mnemonicParsing="false" text="Zoom">
+                    <items>
+                      <MenuItem fx:id="stAgrandir" onAction="#agrandirZoom" text="Agrandir  Ctrl +" />
+                        <MenuItem fx:id="stRetrecir" onAction="#retrecirZoom" text="Rétrécir Ctrl -" />
+                        <MenuItem fx:id="stResetZoom" onAction="#resetZoom" text="Réinitialiser Ctrl 0" />
+                    </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu fx:id="menuAide" mnemonicParsing="false" text="Aide">
+            <items>
+              <MenuItem fx:id="stAPropos" mnemonicParsing="false" onAction="#afficherPopupAPropos" text="À propos" />
+                  <MenuItem fx:id="stGuideUtilisation" mnemonicParsing="false" text="Guide d'utilisation " />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="-4.0" right="-4.0" />
+         </BorderPane.margin>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Pane prefHeight="25.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Group>
+               <children>
+                  <Rectangle fx:id="barreEtat1" arcHeight="5.0" arcWidth="5.0" fill="#f0f3f9" height="26.0" stroke="#c5c5c5" strokeType="INSIDE" width="910.0" />
+                  <Text fx:id="copyrightMention1" layoutX="693.0" layoutY="17.0" strokeWidth="0.0" text="© Copyright - Tous droits réservés">
+                     <font>
+                        <Font name="Lexend Light" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <HBox prefHeight="24.0" prefWidth="162.0">
+               <children>
+                  <Text fill="#424242" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscription" textAlignment="CENTER" wrappingWidth="61.104000091552734">
+                     <font>
+                        <Font name="Lexend Light" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
